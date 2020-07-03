@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="monster/Miho.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+    <style>
+      body {
+        background: url("https://i.redd.it/g628326vo98y.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+    </style>
+
+    <title>Stats calculator KN</title>
+  </head>
+
+  <body>
+
+    <div id="app">
+      <template>
+        <div id="app_gem" class="container mt-3 mb-3 align-self-end">
+
+          <nav  class="navbar navbar-light justify-content-between rounded shadow border border-info" 
+                style="background-color: rgba(49, 48, 48, 0.904)"> 
+
+            <div>
+              <a class="navbar-brand text-light" href="IGN: KiNikoL">
+                <img src="https://lh3.googleusercontent.com/qzrNN1mhmU6xBMt3_IxVRrbysIJLp8WKs8EDyGKuYknYv5Ikos5q5dL7Fbir09u9pw" width="30" height="30" class="d-inline-block align-top rounded-lg shadow-lg" loading="lazy">
+                By KilzaNiko
+              </a>
+            </div>
+            
+            <div>
+              <h4 class="font-weight-bold text-light">Stats calculator</h4>
+            </div>
+
+          </nav>
+
+          <div class="row rounded shadow mt-3 mr-1 ml-1 border border-info" style="background-color: rgba(49, 48, 48, 0.904)">
+
+            <div class="col-sm-12 col-md-4 text-center">
+              <img width="100%" src="https://i.redd.it/6rzw83x9uuwy.png">
+            </div>
+            
+            <div class="col-sm-12 col-md-8 mt-3"> <!-- Form -->
+              <div class="row ml-1 mr-1 mb-3">
+                <div class="col-12 pl-2 pr-2 pt-3 pb-1 rounded shadow-lg border border-info" style="background-color: rgba(0, 0, 0, 0.678);">
+                  <div class="col-12 text-center text-light pb-1">
+                    <h4>Enter astromons stats</h4>
+                  </div>
+                  <form>
+                    <div class="form-group">
+                      <div class="row pl-2 pr-2 pt-2 pb-2">
+
+                        <div class="col-12"> <!-- Input Attack -->
+                          <div class="form-group row">
+                            <label 
+                              for="attack" 
+                              class=" col-11 col-md-3 col-form-label 
+                                      text-light text-center font-weight-bold
+                                      pl-2 pr-2 pt-1 pb-1">
+                              Attack
+                            </label>
+                            <div class="col-12 col-md-9">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text bg-transparent border border-primary">
+                                    <img src="gems/ATK.png" style="width: 34px;"></img>
+                                  </div>
+                                </div>
+                                <input type="number" v-model="atk_i" class="form-control form-control-lg bg-transparent border border-primary text-light" placeholder="Attack" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="attack">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12"> <!-- Input HP -->
+                          <div class="form-group row">
+                            <label 
+                              for="hp" 
+                              class=" col-12 col-md-3 col-form-label 
+                                      text-light text-center font-weight-bold
+                                      pl-2 pr-2 pt-1 pb-1">
+                              HP
+                            </label>
+                            <div class="col-12 col-md-9">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text bg-transparent border border-danger">
+                                    <img src="gems/HP.png" style="width: 34px;"></img>
+                                  </div>
+                                </div>
+                                <input type="number" v-model="hp_i" class="form-control form-control-lg bg-transparent border border-danger text-light" placeholder="HP" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="hp"> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12"> <!-- Input Defense -->
+                          <div class="form-group row">
+                            <label 
+                              for="defense" 
+                              class=" col-12 col-md-3 col-form-label 
+                                      text-light text-center font-weight-bold
+                                      pl-2 pr-2 pt-1 pb-1">
+                              Defense
+                            </label>
+                            <div class="col-12 col-md-9">
+                              <div class="input-group">
+
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text bg-transparent border border-warning">
+                                    <img src="gems/DEF.png" style="width: 34px;"></img>
+                                  </div>
+                                </div>
+                                <input type="number" v-model="def_i" class="form-control form-control-lg bg-transparent border border-warning text-light" placeholder="Defense" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="def"> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12"> <!-- Input Recuperation -->
+                          <div class="form-group row">
+                            <label 
+                              for="rec" 
+                              class=" col-12 col-md-3 col-form-label 
+                                      text-light text-center font-weight-bold
+                                      pl-2 pr-2 pt-1 pb-1">
+                              Recuperation
+                            </label>
+                            <div class="col-12 col-md-9">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text bg-transparent border border-success">
+                                    <img src="gems/REC.png" style="width: 34px;"></img>
+                                  </div>
+                                </div>
+                                <input type="number" v-model="rec_i" class="form-control form-control-lg bg-transparent border border-success text-light" placeholder="Recuperation" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="rec"> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- Stats without ATK/HP/DEF/REC set -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="5" class="text-center">
+                          <span>Stats without ATK/HP/DEF/REC set</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center">Stat</th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><img src="gems/ATK.png" style="width: 24px;"> ATK</th>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_i}}</td>
+                        <td>{{atk_added_x1}}</td>
+                        <td>{{atk_added_x2}}</td>
+                        <td>{{atk_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/HP.png" style="width: 24px;"> HP</th>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_i}}</td>
+                        <td>{{hp_added_x1}}</td>
+                        <td>{{hp_added_x2}}</td>
+                        <td>{{hp_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/DEF.png" style="width: 24px;"> DEF</th>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_i}}</td>
+                        <td>{{def_added_x1}}</td>
+                        <td>{{def_added_x2}}</td>
+                        <td>{{def_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/REC.png" style="width: 24px;"> REC</th>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_i}}</td>
+                        <td>{{rec_added_x1}}</td>
+                        <td>{{rec_added_x2}}</td>
+                        <td>{{rec_added_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- Stats with ATK/HP/DEF/REC set -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="5" class="text-center">
+                          <span>Stats with ATK/HP/DEF/REC set</span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center">Set</th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><img src="gems/ATK.png" style="width: 24px;"> ATK</th>
+                        <td>{{atk_set_added}}</td>
+                        <td>{{atk_set_added_x1}}</td>
+                        <td>{{atk_set_added_x2}}</td>
+                        <td>{{atk_set_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/HP.png" style="width: 24px;"> HP</th>
+                        <td>{{hp_set_added}}</td>
+                        <td>{{hp_set_added_x1}}</td>
+                        <td>{{hp_set_added_x2}}</td>
+                        <td>{{hp_set_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/DEF.png" style="width: 24px;"> DEF</th>
+                        <td>{{def_set_added}}</td>
+                        <td>{{def_set_added_x1}}</td>
+                        <td>{{def_set_added_x2}}</td>
+                        <td>{{def_set_added_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><img src="gems/REC.png" style="width: 24px;"> REC</th>
+                        <td>{{rec_set_added}}</td>
+                        <td>{{rec_set_added_x1}}</td>
+                        <td>{{rec_set_added_x2}}</td>
+                        <td>{{rec_set_added_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- DEBUFF SHOCK -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6" class="text-center align-middle">
+                          <span>
+                            Debuff Shock
+                            <img src="skills\Shock.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/DEF.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{def_set_added}}</td>
+                        <td>{{shock_debuff_ws}}</td>
+                        <td>{{shock_debuff_ws_x1}}</td>
+                        <td>{{shock_debuff_ws_x2}}</td>
+                        <td>{{shock_debuff_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_i}}</td>
+                        <td>{{shock_debuff_wos}}</td>
+                        <td>{{shock_debuff_wos_x1}}</td>
+                        <td>{{shock_debuff_wos_x2}}</td>
+                        <td>{{shock_debuff_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- DEBUFF DEF DOWN -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6" class="text-center">
+                          <span>
+                            Debuff Defense Down
+                            <img src="skills\Defense Down.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/DEF.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{def_set_added}}</td>
+                        <td>{{def_debuff_ws}}</td>
+                        <td>{{def_debuff_ws_x1}}</td>
+                        <td>{{def_debuff_ws_x2}}</td>
+                        <td>{{def_debuff_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_i}}</td>
+                        <td>{{def_debuff_wos}}</td>
+                        <td>{{def_debuff_wos_x1}}</td>
+                        <td>{{def_debuff_wos_x2}}</td>
+                        <td>{{def_debuff_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- DEBUFF DEF UP -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6" class="text-center">
+                          <span>
+                            Buff Defense Up
+                            <img src="skills\Defense Up.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/DEF.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{def_set_added}}</td>
+                        <td>{{def_buff_ws}}</td>
+                        <td>{{def_buff_ws_x1}}</td>
+                        <td>{{def_buff_ws_x2}}</td>
+                        <td>{{def_buff_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_i}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_wos}}</td>
+                        <td>{{def_buff_wos_x1}}</td>
+                        <td>{{def_buff_wos_x2}}</td>
+                        <td>{{def_buff_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- DEBUFF ATK DOWN -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6" class="text-center">
+                          <span>
+                            Debuff Attack Down
+                            <img src="skills\Attack Down.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/ATK.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{atk_set_added}}</td>
+                        <td>{{atk_debuff_ws}}</td>
+                        <td>{{atk_debuff_ws_x1}}</td>
+                        <td>{{atk_debuff_ws_x2}}</td>
+                        <td>{{atk_debuff_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_i}}</td>
+                        <td>{{atk_debuff_wos}}</td>
+                        <td>{{atk_debuff_wos_x1}}</td>
+                        <td>{{atk_debuff_wos_x2}}</td>
+                        <td>{{atk_debuff_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- BUFF ATK UP -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6" class="text-center">
+                          <span>
+                            Buff Attack Up
+                            <img src="skills\Attack Up.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/ATK.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">BASE</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{atk_set_added}}</td>
+                        <td>{{atk_buff_ws}}</td>
+                        <td>{{atk_buff_ws_x1}}</td>
+                        <td>{{atk_buff_ws_x2}}</td>
+                        <td>{{atk_buff_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_i}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_wos}}</td>
+                        <td>{{atk_buff_wos_x1}}</td>
+                        <td>{{atk_buff_wos_x2}}</td>
+                        <td>{{atk_buff_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- ADVANTAGE ATK MULTIPLIER -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan=6 class="text-center">
+                          <span>
+                            Elemental Multiplier Advantage
+                            <img src="Elements/Fire.png" style="width: 30px;"></img>
+                            ->
+                            <img src="Elements/Wood.png" style="width: 30px;"></img>
+                            ->
+                            <img src="Elements/Water.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/ATK.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">Base</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{atk_set_added}}</td>
+                        <td>{{atk_advantage_ws}}</td>
+                        <td>{{atk_advantage_ws_x1}}</td>
+                        <td>{{atk_advantage_ws_x2}}</td>
+                        <td>{{atk_advantage_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_i}}</td>
+                        <td>{{atk_advantage_wos}}</td>
+                        <td>{{atk_advantage_wos_x1}}</td>
+                        <td>{{atk_advantage_wos_x2}}</td>
+                        <td>{{atk_advantage_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"> <!-- DISADVANTAGE ATK MULTIPLIER -->
+                  <table class="table table-bordered table-sm table-dark table-striped" style="box-shadow: 2px 2px 10px #000000">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan=6 class="text-center">
+                          <span>
+                            Elemental Multiplier Disadvantage
+                            <img src="Elements/Fire.png" style="width: 30px;"></img>
+                            <-
+                            <img src="Elements/Wood.png" style="width: 30px;"></img>
+                            <-
+                            <img src="Elements/Water.png" style="width: 30px;"></img>
+                          </span>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" width="90px" class="text-center"><img src="gems/ATK.png" style="width: 24px;"></img> Set </th>
+                        <th scope="col">Base</th>
+                        <th scope="col">x0</th>
+                        <th scope="col">x1</th>
+                        <th scope="col">x2</th>
+                        <th scope="col">x3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">With</th>
+                        <td>{{atk_set_added}}</td>
+                        <td>{{atk_disadvantage_ws}}</td>
+                        <td>{{atk_disadvantage_ws_x1}}</td>
+                        <td>{{atk_disadvantage_ws_x2}}</td>
+                        <td>{{atk_disadvantage_ws_x3}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Without</th>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_i}}</td>
+                        <td>{{atk_disadvantage_wos}}</td>
+                        <td>{{atk_disadvantage_wos_x1}}</td>
+                        <td>{{atk_disadvantage_wos_x2}}</td>
+                        <td>{{atk_disadvantage_wos_x3}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <!-- built files will be auto injected -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="calc_gem.js"></script>
+
+    <style>
+      #app {
+        min-width:490px;
+        width: auto !important;
+        width:490px;
+      }
+    </style>
+
+  </body>
+
+</html>
