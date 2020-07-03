@@ -236,9 +236,9 @@ const app = new Vue ({
         return buff(this.def_set_added_x3, buff_def)
       },
 
-      //with defense set
+      //without defense set
       def_buff_wos(){
-        return buff(this.def_i, buff_def)
+        return buff(parseInt(this.def_i), buff_def)
       },
       def_buff_wos_x1(){
         return buff(this.def_added_x1, buff_def)
