@@ -3,9 +3,7 @@ const per_atk_hp_def = 1.2;
 const per_rec = 1.25;
 
 // rank gem
-const gem6_x1 = 1.68;
-const gem6_x2 = 2.36;
-const gem6_x3 = 3.04;
+const gem6 = 0.68;
 
 // debuff's
 const debuff_def = 0.7;
@@ -21,8 +19,8 @@ const advantage = 1.5;
 const disadvantage = 0.5;
 
 // functions
-const add_gem = (stat = 0, gem) => {
-  const calc = stat * gem;
+const add_gem = (stat = 0, gem, cgem) => {
+  const calc = cgem === 1 ? (stat * gem) + stat : ((stat * gem) * cgem) + stat ;
   return Math.round(calc);
 };
 const add_set = (stat = 0, percentage = 0, stat_add = 0) => {
@@ -56,46 +54,46 @@ const app = new Vue ({
 
       // attack
       atk_added_x1(){
-        return add_gem(this.atk_i, gem6_x1)
+        return add_gem(parseInt(this.atk_i), gem6, 1)
       },
       atk_added_x2(){
-        return add_gem(this.atk_i, gem6_x2)
+        return add_gem(parseInt(this.atk_i), gem6, 2)
       },
       atk_added_x3(){
-        return add_gem(this.atk_i, gem6_x3)
+        return add_gem(parseInt(this.atk_i), gem6, 3)
       },
 
       // hp
       hp_added_x1(){
-        return add_gem(this.hp_i, gem6_x1)
+        return add_gem(parseInt(this.hp_i), gem6, 1)
       },
       hp_added_x2(){
-        return add_gem(this.hp_i, gem6_x2)
+        return add_gem(parseInt(this.hp_i), gem6, 2)
       },
       hp_added_x3(){
-        return add_gem(this.hp_i, gem6_x3)
+        return add_gem(parseInt(this.hp_i), gem6, 3)
       },
 
       // def
       def_added_x1(){
-        return add_gem(this.def_i, gem6_x1)
+        return add_gem(parseInt(this.def_i), gem6, 1)
       },
       def_added_x2(){
-        return add_gem(this.def_i, gem6_x2)
+        return add_gem(parseInt(this.def_i), gem6, 2)
       },
       def_added_x3(){
-        return add_gem(this.def_i, gem6_x3)
+        return add_gem(parseInt(this.def_i), gem6, 3)
       },
 
       // rec
       rec_added_x1(){
-        return add_gem(this.rec_i, gem6_x1)
+        return add_gem(parseInt(this.rec_i), gem6, 1)
       },
       rec_added_x2(){
-        return add_gem(this.rec_i, gem6_x2)
+        return add_gem(parseInt(this.rec_i), gem6, 2)
       },
       rec_added_x3(){
-        return add_gem(this.rec_i, gem6_x3)
+        return add_gem(parseInt(this.rec_i), gem6, 3)
       },
     //#endregion -^
     

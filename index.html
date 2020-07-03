@@ -189,33 +189,45 @@
                         <th scope="row"><img src="gems/ATK.png" style="width: 24px;"> ATK</th>
                         <td v-if="atk_i === ''">0</td>
                         <td v-else>{{atk_i}}</td>
-                        <td>{{atk_added_x1}}</td>
-                        <td>{{atk_added_x2}}</td>
-                        <td>{{atk_added_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_added_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_added_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/HP.png" style="width: 24px;"> HP</th>
                         <td v-if="hp_i === ''">0</td>
                         <td v-else>{{hp_i}}</td>
-                        <td>{{hp_added_x1}}</td>
-                        <td>{{hp_added_x2}}</td>
-                        <td>{{hp_added_x3}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_added_x1}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_added_x2}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/DEF.png" style="width: 24px;"> DEF</th>
                         <td v-if="def_i === ''">0</td>
                         <td v-else>{{def_i}}</td>
-                        <td>{{def_added_x1}}</td>
-                        <td>{{def_added_x2}}</td>
-                        <td>{{def_added_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_added_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_added_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/REC.png" style="width: 24px;"> REC</th>
                         <td v-if="rec_i === ''">0</td>
                         <td v-else>{{rec_i}}</td>
-                        <td>{{rec_added_x1}}</td>
-                        <td>{{rec_added_x2}}</td>
-                        <td>{{rec_added_x3}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_added_x1}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_added_x2}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_added_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -240,31 +252,47 @@
                     <tbody>
                       <tr>
                         <th scope="row"><img src="gems/ATK.png" style="width: 24px;"> ATK</th>
-                        <td>{{atk_set_added}}</td>
-                        <td>{{atk_set_added_x1}}</td>
-                        <td>{{atk_set_added_x2}}</td>
-                        <td>{{atk_set_added_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/HP.png" style="width: 24px;"> HP</th>
-                        <td>{{hp_set_added}}</td>
-                        <td>{{hp_set_added_x1}}</td>
-                        <td>{{hp_set_added_x2}}</td>
-                        <td>{{hp_set_added_x3}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_set_added}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_set_added_x1}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_set_added_x2}}</td>
+                        <td v-if="hp_i === ''">0</td>
+                        <td v-else>{{hp_set_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/DEF.png" style="width: 24px;"> DEF</th>
-                        <td>{{def_set_added}}</td>
-                        <td>{{def_set_added_x1}}</td>
-                        <td>{{def_set_added_x2}}</td>
-                        <td>{{def_set_added_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row"><img src="gems/REC.png" style="width: 24px;"> REC</th>
-                        <td>{{rec_set_added}}</td>
-                        <td>{{rec_set_added_x1}}</td>
-                        <td>{{rec_set_added_x2}}</td>
-                        <td>{{rec_set_added_x3}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_set_added}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_set_added_x1}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_set_added_x2}}</td>
+                        <td v-if="rec_i === ''">0</td>
+                        <td v-else>{{rec_set_added_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -293,20 +321,29 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{def_set_added}}</td>
-                        <td>{{shock_debuff_ws}}</td>
-                        <td>{{shock_debuff_ws_x1}}</td>
-                        <td>{{shock_debuff_ws_x2}}</td>
-                        <td>{{shock_debuff_ws_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_ws}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_ws_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_ws_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
                         <td v-if="def_i === ''">0</td>
                         <td v-else>{{def_i}}</td>
-                        <td>{{shock_debuff_wos}}</td>
-                        <td>{{shock_debuff_wos_x1}}</td>
-                        <td>{{shock_debuff_wos_x2}}</td>
-                        <td>{{shock_debuff_wos_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_wos}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_wos_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_wos_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{shock_debuff_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -335,20 +372,29 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{def_set_added}}</td>
-                        <td>{{def_debuff_ws}}</td>
-                        <td>{{def_debuff_ws_x1}}</td>
-                        <td>{{def_debuff_ws_x2}}</td>
-                        <td>{{def_debuff_ws_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_ws}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_ws_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_ws_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
                         <td v-if="def_i === ''">0</td>
                         <td v-else>{{def_i}}</td>
-                        <td>{{def_debuff_wos}}</td>
-                        <td>{{def_debuff_wos_x1}}</td>
-                        <td>{{def_debuff_wos_x2}}</td>
-                        <td>{{def_debuff_wos_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_wos}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_wos_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_wos_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_debuff_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -377,11 +423,16 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{def_set_added}}</td>
-                        <td>{{def_buff_ws}}</td>
-                        <td>{{def_buff_ws_x1}}</td>
-                        <td>{{def_buff_ws_x2}}</td>
-                        <td>{{def_buff_ws_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_set_added}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_ws}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_ws_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_ws_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
@@ -389,9 +440,12 @@
                         <td v-else>{{def_i}}</td>
                         <td v-if="def_i === ''">0</td>
                         <td v-else>{{def_buff_wos}}</td>
-                        <td>{{def_buff_wos_x1}}</td>
-                        <td>{{def_buff_wos_x2}}</td>
-                        <td>{{def_buff_wos_x3}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_wos_x1}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_wos_x2}}</td>
+                        <td v-if="def_i === ''">0</td>
+                        <td v-else>{{def_buff_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -420,20 +474,29 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{atk_set_added}}</td>
-                        <td>{{atk_debuff_ws}}</td>
-                        <td>{{atk_debuff_ws_x1}}</td>
-                        <td>{{atk_debuff_ws_x2}}</td>
-                        <td>{{atk_debuff_ws_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_ws}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_ws_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_ws_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
                         <td v-if="atk_i === ''">0</td>
                         <td v-else>{{atk_i}}</td>
-                        <td>{{atk_debuff_wos}}</td>
-                        <td>{{atk_debuff_wos_x1}}</td>
-                        <td>{{atk_debuff_wos_x2}}</td>
-                        <td>{{atk_debuff_wos_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_wos}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_wos_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_wos_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_debuff_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -462,11 +525,16 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{atk_set_added}}</td>
-                        <td>{{atk_buff_ws}}</td>
-                        <td>{{atk_buff_ws_x1}}</td>
-                        <td>{{atk_buff_ws_x2}}</td>
-                        <td>{{atk_buff_ws_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_ws}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_ws_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_ws_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
@@ -474,9 +542,12 @@
                         <td v-else>{{atk_i}}</td>
                         <td v-if="atk_i === ''">0</td>
                         <td v-else>{{atk_buff_wos}}</td>
-                        <td>{{atk_buff_wos_x1}}</td>
-                        <td>{{atk_buff_wos_x2}}</td>
-                        <td>{{atk_buff_wos_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_wos_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_wos_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_buff_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -509,20 +580,29 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{atk_set_added}}</td>
-                        <td>{{atk_advantage_ws}}</td>
-                        <td>{{atk_advantage_ws_x1}}</td>
-                        <td>{{atk_advantage_ws_x2}}</td>
-                        <td>{{atk_advantage_ws_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_ws}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_ws_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_ws_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
                         <td v-if="atk_i === ''">0</td>
                         <td v-else>{{atk_i}}</td>
-                        <td>{{atk_advantage_wos}}</td>
-                        <td>{{atk_advantage_wos_x1}}</td>
-                        <td>{{atk_advantage_wos_x2}}</td>
-                        <td>{{atk_advantage_wos_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_wos}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_wos_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_wos_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_advantage_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -555,20 +635,29 @@
                     <tbody>
                       <tr>
                         <th scope="row">With</th>
-                        <td>{{atk_set_added}}</td>
-                        <td>{{atk_disadvantage_ws}}</td>
-                        <td>{{atk_disadvantage_ws_x1}}</td>
-                        <td>{{atk_disadvantage_ws_x2}}</td>
-                        <td>{{atk_disadvantage_ws_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_set_added}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_ws}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_ws_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_ws_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_ws_x3}}</td>
                       </tr>
                       <tr>
                         <th scope="row">Without</th>
                         <td v-if="atk_i === ''">0</td>
                         <td v-else>{{atk_i}}</td>
-                        <td>{{atk_disadvantage_wos}}</td>
-                        <td>{{atk_disadvantage_wos_x1}}</td>
-                        <td>{{atk_disadvantage_wos_x2}}</td>
-                        <td>{{atk_disadvantage_wos_x3}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_wos}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_wos_x1}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_wos_x2}}</td>
+                        <td v-if="atk_i === ''">0</td>
+                        <td v-else>{{atk_disadvantage_wos_x3}}</td>
                       </tr>
                     </tbody>
                   </table>
