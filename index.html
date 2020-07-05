@@ -85,7 +85,7 @@
                                     <img src="gems/ATK.png" style="width: 34px;"></img>
                                   </div>
                                 </div>
-                                <input type="number" v-model="atk_i" class="form-control form-control-lg bg-transparent border border-primary text-light" placeholder="Attack" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="attack">
+                                <input type="number" v-model.number="atk_i" class="form-control form-control-lg bg-transparent border border-primary text-light" placeholder="Attack" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="attack">
                               </div>
                             </div>
                           </div>
@@ -107,7 +107,7 @@
                                     <img src="gems/HP.png" style="width: 34px;"></img>
                                   </div>
                                 </div>
-                                <input type="number" v-model="hp_i" class="form-control form-control-lg bg-transparent border border-danger text-light" placeholder="HP" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="hp"> 
+                                <input type="number" v-model.number="hp_i" class="form-control form-control-lg bg-transparent border border-danger text-light" placeholder="HP" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="hp"> 
                               </div>
                             </div>
                           </div>
@@ -130,7 +130,7 @@
                                     <img src="gems/DEF.png" style="width: 34px;"></img>
                                   </div>
                                 </div>
-                                <input type="number" v-model="def_i" class="form-control form-control-lg bg-transparent border border-warning text-light" placeholder="Defense" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="def"> 
+                                <input type="number" v-model.number="def_i" class="form-control form-control-lg bg-transparent border border-warning text-light" placeholder="Defense" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="def"> 
                               </div>
                             </div>
                           </div>
@@ -152,7 +152,7 @@
                                     <img src="gems/REC.png" style="width: 34px;"></img>
                                   </div>
                                 </div>
-                                <input type="number" v-model="rec_i" class="form-control form-control-lg bg-transparent border border-success text-light" placeholder="Recuperation" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="rec"> 
+                                <input type="number" v-model.number="rec_i" class="form-control form-control-lg bg-transparent border border-success text-light" placeholder="Recuperation" ng-model="number" onKeyPress="if(this.value.length==5) return false;" min="0" id="rec"> 
                               </div>
                             </div>
                           </div>
